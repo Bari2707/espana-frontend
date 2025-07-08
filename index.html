@@ -1,0 +1,231 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ESPADA Guild HQ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #0f172a;
+      color: white;
+    }
+    header, section, footer {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    header {
+      text-align: center;
+      background-color: #1e293b;
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+    header img {
+      width: 80px;
+      height: 80px;
+      border-radius: 12px;
+      margin-bottom: 10px;
+    }
+    h1, h2 {
+      color: #FBBF24;
+    }
+    .cta-button {
+      display: inline-block;
+      background: #FBBF24;
+      color: black;
+      padding: 10px 20px;
+      border-radius: 10px;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .stat-box {
+      background: #1e293b;
+      padding: 15px;
+      text-align: center;
+      border-radius: 10px;
+    }
+    .notice-board {
+      background: #1e293b;
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 20px;
+    }
+    .notice {
+      background: #0f172a;
+      border-left: 4px solid #FBBF24;
+      margin-bottom: 10px;
+      padding: 10px;
+    }
+    .form-section, .leadership {
+      background: #1e293b;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 30px;
+    }
+    form label {
+      display: block;
+      margin-top: 10px;
+      margin-bottom: 5px;
+    }
+    form input {
+      width: 100%;
+      padding: 10px;
+      background: #0f172a;
+      border: none;
+      border-radius: 6px;
+      color: white;
+    }
+    form button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      background: #FBBF24;
+      color: black;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+    .leaders {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .leader {
+      background: #0f172a;
+      padding: 15px;
+      flex: 1;
+      min-width: 200px;
+      border-radius: 8px;
+      text-align: center;
+    }
+    .leader img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 2px solid #FBBF24;
+    }
+    footer {
+      text-align: center;
+      font-size: 14px;
+      color: gray;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="espada-logo.png" alt="ESPADA Logo">
+    <h1>Victory Through Unity</h1>
+    <p><em>Strength Through Strategy</em></p>
+    <a href="#form" class="cta-button">Join ESPADA Guild</a>
+  </header>  <section class="stats">
+    <div class="stat-box">
+      <h2>50+</h2>
+      <p>Active Members</p>
+    </div>
+    <div class="stat-box">
+      <h2>15+</h2>
+      <p>Tournaments Won</p>
+    </div>
+    <div class="stat-box">
+      <h2>3</h2>
+      <p>Championships</p>
+    </div>
+    <div class="stat-box">
+      <h2>2021</h2>
+      <p>Established</p>
+    </div>
+  </section>  <section class="notice-board">
+    <h2>📢 Notice Board</h2>
+    <div id="notice-board"></div>
+  </section>  <section id="form" class="form-section">
+    <h2>📝 Registration Form</h2>
+    <form id="guildForm">
+      <label for="ign">In-Game Name</label>
+      <input type="text" name="ign" required><label for="uid">UID</label>
+  <input type="number" name="uid" required>
+
+  <label for="br_rank">BR Rank</label>
+  <input type="text" name="br_rank" required>
+
+  <label for="cs_rank">CS Rank</label>
+  <input type="text" name="cs_rank" required>
+
+  <label for="role">Preferred Role</label>
+  <input type="text" name="role" required>
+
+  <button type="submit">Submit</button>
+</form>
+
+  </section>  <section class="leadership">
+    <h2>👑 Guild Leadership</h2>
+    <div class="leaders">
+      <div class="leader">
+        <img src="zukachi.jpg" onerror="this.src='placeholder.jpg'">
+        <h3>Zukachi</h3>
+        <p>Guild Leader</p>
+        <p>UID: 5271995973</p>
+        <a href="https://wa.me/234XXXXXXXXXX">WhatsApp Me</a>
+      </div>
+      <div class="leader">
+        <img src="tekkz.jpg" onerror="this.src='placeholder.jpg'">
+        <h3>Tekkz</h3>
+        <p>Co-Leader</p>
+        <p>Strategy Lead</p>
+      </div>
+      <div class="leader">
+        <img src="jeo.jpg" onerror="this.src='placeholder.jpg'">
+        <h3>J.E.O</h3>
+        <p>Captain</p>
+        <p>Combat Tactics</p>
+      </div>
+    </div>
+  </section>  <footer>
+    <p>© 2025 ESPADA Guild — Built by Zukachi</p>
+    <p>
+      <a href="https://wa.me/234XXXXXXXXXX">WhatsApp Group</a> | 
+      <a href="https://t.me/espadaguildbot">Telegram Bot</a>
+    </p>
+  </footer>  <script>
+    async function loadNotices() {
+      try {
+        const res = await fetch("https://your-backend-url.onrender.com/notices");
+        const data = await res.json();
+        const board = document.getElementById("notice-board");
+        board.innerHTML = data.map(n => `<div class='notice'>${n.message}</div>`).join('');
+      } catch (err) {
+        document.getElementById("notice-board").innerHTML = '<p>Unable to load notices.</p>';
+      }
+    }
+    loadNotices();
+    setInterval(loadNotices, 30000);
+
+    document.getElementById("guildForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const form = new FormData(e.target);
+      const data = Object.fromEntries(form.entries());
+
+      const res = await fetch("https://your-backend-url.onrender.com/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      if (res.ok) {
+        alert("Form submitted successfully!");
+        e.target.reset();
+      } else {
+        alert("Error sending application.");
+      }
+    });
+  </script></body>
+</html>
