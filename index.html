@@ -197,35 +197,35 @@
       <a href="https://t.me/espadaguildbot">Telegram Bot</a>
     </p>
   </footer>  <script>
-    async function loadNotices() {
-      try {
-        const res = await fetch("https://your-backend-url.onrender.com/notices");
-        const data = await res.json();
-        const board = document.getElementById("notice-board");
-        board.innerHTML = data.map(n => `<div class='notice'>${n.message}</div>`).join('');
-      } catch (err) {
-        document.getElementById("notice-board").innerHTML = '<p>Unable to load notices.</p>';
-      }
+  async function loadNotices() {
+    try {
+      const res = await fetch("https://espada-backend-hq.onrender.com/notices");
+      const data = await res.json();
+      const board = document.getElementById("notice-board");
+      board.innerHTML = data.map(n => `<div class='notice'>${n.message}</div>`).join('');
+    } catch (err) {
+      document.getElementById("notice-board").innerHTML = '<p>Unable to load notices.</p>';
     }
-    loadNotices();
-    setInterval(loadNotices, 30000);
+  }
+  loadNotices();
+  setInterval(loadNotices, 30000);
 
-    document.getElementById("guildForm").addEventListener("submit", async (e) => {
-      e.preventDefault();
-      const form = new FormData(e.target);
-      const data = Object.fromEntries(form.entries());
+  document.getElementById("guildForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const form = new FormData(e.target);
+    const data = Object.fromEntries(form.entries());
 
-      const res = await fetch("https://your-backend-url.onrender.com/register", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
-      if (res.ok) {
-        alert("Form submitted successfully!");
-        e.target.reset();
-      } else {
-        alert("Error sending application.");
-      }
+    const res = await fetch("https://espada-backend-hq.onrender.com/register", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
     });
-  </script></body>
+    if (res.ok) {
+      alert("Form submitted successfully!");
+      e.target.reset();
+    } else {
+      alert("Error sending application.");
+    }
+  });
+</script></body>
 </html>
